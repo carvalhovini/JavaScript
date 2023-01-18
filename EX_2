@@ -1,0 +1,16 @@
+//Escreva uma função que encontre todas as combinações de um array de elementos.
+
+function findCombinations(arr) {
+    let result = [];
+    function backtrack(temp, start) {
+        result.push(temp.slice());
+        for (let i = start; i < arr.length; i++) {
+            temp.push(arr[i]);
+            backtrack(temp, i + 1);
+            temp.pop();
+        }
+    }
+    backtrack([], 0);
+    return result;
+}
+console.log(findCombinations([1, 2, 3]));
