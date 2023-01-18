@@ -1,0 +1,20 @@
+//Escreva uma função que encontra o número mais frequente em um array de números.
+
+function findMostFrequent(arr) {
+    let numFrequency = {};
+    let maxNum;
+    let maxCount = 0;
+    for (let num of arr) {
+        if (!numFrequency[num]) {
+            numFrequency[num] = 1;
+        } else {
+            numFrequency[num]++;
+        }
+        if (numFrequency[num] > maxCount) {
+            maxCount = numFrequency[num];
+            maxNum = num;
+        }
+    }
+    return maxNum;
+}
+console.log(findMostFrequent([1, 2, 3, 4, 5, 3, 2, 2, 2, 3]));
