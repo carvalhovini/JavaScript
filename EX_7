@@ -1,0 +1,51 @@
+//um código em JavaScript que permite que o usuário selecione uma imagem de um carrossel e exiba uma versão ampliada da imagem selecionada.
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <script>
+        function showImage(image) {
+            document.getElementById("image").src = image.src;
+            document.getElementById("modal").style.display = "block";
+        }
+
+        function closeModal() {
+            document.getElementById("modal").style.display = "none";
+        }
+    </script>
+</head>
+<body>
+    <div id="carousel">
+        <img onclick="showImage(this)" src="image1.jpg" alt="Image 1">
+        <img onclick="showImage(this)" src="image2.jpg" alt="Image 2">
+        <img onclick="showImage(this)" src="image3.jpg" alt="Image 3">
+    </div>
+    <div id="modal" onclick="closeModal()">
+        <img id="image" src="image1.jpg" alt="">
+    </div>
+</body>
+</html>
+
+
+
+CSS
+
+#modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.9);
+}
+
+#image {
+  max-width: 90%;
+  max-height: 90%;
+  margin: auto;
+  display: block;
+}
