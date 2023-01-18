@@ -1,0 +1,19 @@
+//Escreva uma função que encontre todas as permutações de uma string.
+
+function findPermutations(str) {
+    let result = [];
+    function backtrack(temp, chars) {
+        if (temp.length === str.length) {
+            result.push(temp);
+            return;
+        }
+        for (let i = 0; i < chars.length; i++) {
+            temp += chars[i];
+            backtrack(temp, chars.slice(0, i) + chars.slice(i + 1));
+            temp = temp.slice(0, temp.length - 1);
+        }
+    }
+    backtrack('', str);
+    return result;
+}
+console.log(findPermutations('abc'));
