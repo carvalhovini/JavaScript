@@ -1,0 +1,28 @@
+//um código em JavaScript que valida se um formulário de login está preenchido corretamente antes de enviá-lo.
+
+<!DOCTYPE html>
+<html>
+<head>
+    <script>
+        function validateForm() {
+            var x = document.forms["loginForm"]["username"].value;
+            var y = document.forms["loginForm"]["password"].value;
+            if (x == "" || y == "") {
+                alert("Todos os campos devem ser preenchidos!");
+                return false;
+            }
+        }
+    </script>
+</head>
+<body>
+    <form name="loginForm" onsubmit="return validateForm()">
+        <label for="username">Usuário:</label>
+        <input type="text" id="username" name="username">
+        <br>
+        <label for="password">Senha:</label>
+        <input type="password" id="password" name="password">
+        <br>
+        <input type="submit" value="Enviar">
+    </form>
+</body>
+</html>
