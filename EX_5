@@ -1,0 +1,27 @@
+//um código em JavaScript que exibe uma mensagem de boas-vindas para o usuário 
+//quando a página é carregada e esconde a mensagem quando o usuário clica em um botão "OK".
+
+<!DOCTYPE html>
+<html>
+<head>
+    <script>
+        function showWelcome() {
+            document.getElementById("welcome").style.display = "block";
+        }
+
+        function hideWelcome() {
+            document.getElementById("welcome").style.display = "none";
+        }
+    </script>
+</head>
+<body onload="showWelcome()">
+    <div id="welcome">Bem-vindo ao nosso site!</div>
+    <button onclick="hideWelcome()">OK</button>
+</body>
+</html>
+
+//Esse código adiciona duas funções JavaScript, "showWelcome" e "hideWelcome". 
+//A função "showWelcome" é chamada quando a página é carregada e exibe a mensagem de boas-vindas ao usuário. 
+//A função "hideWelcome" é chamada quando o usuário clica no botão "OK" e esconde a mensagem. 
+//A propriedade "onload" do elemento "body" é usada para chamar a função "showWelcome" quando a página é carregada.
+//A propriedade "onclick" do botão "OK" é usada para chamar a função "hideWelcome" quando o usuário clica no botão.
