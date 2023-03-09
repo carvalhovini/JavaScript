@@ -1,4 +1,4 @@
-//Escreva uma função que encontra o número mais frequente em um array de números[
+//Escreva uma função que encontra o número mais frequente em um array de números
 
 function findMostFrequent(arr) {
     let numFrequency = {};
